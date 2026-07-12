@@ -15,7 +15,7 @@
 
 ## Overview
 
-LIS Middleware Manager is a PyQt6 desktop application that lets you run, monitor, and manage multiple Java JAR middleware services from a single interface. It provides real-time log streaming, automatic crash recovery, role-based access control, and secure user authentication — all wrapped in a clean dark-themed UI.
+LIS Middleware Manager is a PyQt6 desktop application that lets you run, monitor, and manage multiple Java JAR middleware services from a single interface. It provides real-time log streaming, automatic crash recovery, role-based access control, and secure user authentication - all wrapped in a clean dark-themed UI.
 
 ---
 
@@ -31,23 +31,23 @@ LIS Middleware Manager is a PyQt6 desktop application that lets you run, monitor
 ## Features
 
 ### Process Management
-- **Add multiple JAR services** — browse and register any number of Java JAR files
-- **Start / Stop individual services** — with confirmation prompts to prevent accidents
-- **Start All / Stop All** — control all services in one click
-- **Auto-restart on crash** — crashed services automatically restart after 3 seconds
-- **Full process tree termination** — uses `taskkill /T` on Windows to kill child JVM processes, ensuring no background Java processes are left behind
+- **Add multiple JAR services** - browse and register any number of Java JAR files
+- **Start / Stop individual services** - with confirmation prompts to prevent accidents
+- **Start All / Stop All** - control all services in one click
+- **Auto-restart on crash** - crashed services automatically restart after 3 seconds
+- **Full process tree termination** - uses `taskkill /T` on Windows to kill child JVM processes, ensuring no background Java processes are left behind
 
 ### Log Viewer
-- **Real-time streaming** — stdout and stderr displayed live as the process runs
-- **Per-service log panel** — click any service in the sidebar to view its logs
-- **Persistent log files** — logs saved to `middlewere_logs/<service-name>.log`
-- **Colour-coded output** — normal output in white, errors in orange, system messages in colour
+- **Real-time streaming** - stdout and stderr displayed live as the process runs
+- **Per-service log panel** - click any service in the sidebar to view its logs
+- **Persistent log files** - logs saved to `middlewere_logs/<service-name>.log`
+- **Colour-coded output** - normal output in white, errors in orange, system messages in colour
 
 ### Authentication & Security
-- **Secure login screen** — shown on every launch
-- **PBKDF2-HMAC-SHA256** password hashing with a unique 32-byte random salt per user (260,000 iterations — OWASP 2023 standard)
-- **Timing-safe comparison** — uses `secrets.compare_digest` to prevent timing attacks
-- **Passwords never stored** — only the hash and salt are saved to disk
+- **Secure login screen** - shown on every launch
+- **PBKDF2-HMAC-SHA256** password hashing with a unique 32-byte random salt per user (260,000 iterations - OWASP 2023 standard)
+- **Timing-safe comparison** - uses `secrets.compare_digest` to prevent timing attacks
+- **Passwords never stored** - only the hash and salt are saved to disk
 
 ### Role-Based Access Control
 
@@ -63,11 +63,11 @@ LIS Middleware Manager is a PyQt6 desktop application that lets you run, monitor
 | Reset other users' passwords | ✅ | ❌ |
 
 ### User Management *(Admin only)*
-- **Add users** — create new Admin or General accounts
-- **Remove users** — delete any account except your own
-- **Reset passwords** — reset any user's password without knowing the old one
-- **User list** — view all registered users with their roles
-- **Multi-user support** — unlimited users stored in a single JSON file
+- **Add users** - create new Admin or General accounts
+- **Remove users** - delete any account except your own
+- **Reset passwords** - reset any user's password without knowing the old one
+- **User list** - view all registered users with their roles
+- **Multi-user support** - unlimited users stored in a single JSON file
 
 ---
 
